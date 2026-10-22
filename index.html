@@ -76,7 +76,7 @@
       "gemini-2.0-flash",
       "gemini-1.5-flash-latest",
       "gemini-1.5-pro",
-      "gemini-3.8-flas"
+      "gemini-2.5-flash"
     ];
 
     // ==========================================
@@ -215,6 +215,136 @@
     // ĐỀ MẪU CHUẨN MA TRẬN 2025
     // ==========================================
     const DEFAULT_EXAMS = {
+      "8_chapter": {
+        title: "Toán 8 (KNTT) - Bài kiểm tra cuối Chương I: Đa thức - Bài kiểm tra số 1",
+        part1: [
+          { id: 1, level: "Nhận biết", question: "Biểu thức nào sau đây là đơn thức nhiều biến?", options: ["$2x^2y$", "$2x + y$", "$\frac{x}{y}$", "$x^2 - 3$"], correct: 0 },
+          { id: 2, level: "Nhận biết", question: "Bậc của đơn thức $-5x^3y^2z$ là:", options: ["$5$", "$6$", "$3$", "$2$"], correct: 1 },
+          { id: 3, level: "Nhận biết", question: "Cặp đơn thức nào sau đây là hai đơn thức đồng dạng?", options: ["$2x^2y$ và $2xy^2$", "$-3x^2y$ và $5x^2y$", "$4x^3$ và $4y^3$", "$xy$ và $x^2y^2$"], correct: 1 },
+          { id: 4, level: "Nhận biết", question: "Thu gọn đơn thức $P = (-2xy^2) \cdot (3x^2y)$ ta được:", options: ["$-6x^3y^3$", "$6x^3y^3$", "$-5x^3y^3$", "$-6x^2y^2$"], correct: 0 },
+          { id: 5, level: "Nhận biết", question: "Bậc của đa thức $A = 4x^4 - 2x^2y^3 + 5x^3 - 7$ là:", options: ["$4$", "$5$", "$3$", "$9$"], correct: 1 },
+          { id: 6, level: "Nhận biết", question: "Kết quả của phép tính $(3x^2y) + (-5x^2y)$ là:", options: ["$-2x^2y$", "$8x^2y$", "$-2x^4y^2$", "$2x^2y$"], correct: 0 },
+          { id: 7, level: "Thông hiểu", question: "Thu gọn đa thức $M = 2x^2y - 5xy + 3x^2y + 5xy - 4$ ta được:", options: ["$5x^2y - 4$", "$5x^2y + 10xy - 4$", "$x^2y - 4$", "$5x^2y$"], correct: 0 },
+          { id: 8, level: "Thông hiểu", question: "Cho đa thức $A = 2x^2 - y$ và $B = x^2 + 3y$. Đa thức $A - B$ bằng:", options: ["$x^2 - 4y$", "$x^2 + 2y$", "$3x^2 + 2y$", "$x^2 + 4y$"], correct: 0 },
+          { id: 9, level: "Thông hiểu", question: "Tích của đơn thức $2x$ với đa thức $x^2 - 3x + 1$ là:", options: ["$2x^3 - 6x^2 + 2x$", "$2x^3 - 6x^2 + 1$", "$2x^3 - 3x + 2x$", "$2x^2 - 6x + 2$"], correct: 0 },
+          { id: 10, level: "Thông hiểu", question: "Kết quả của phép nhân $(x - 2)(x + 3)$ là:", options: ["$x^2 + x - 6$", "$x^2 - x - 6$", "$x^2 + 5x - 6$", "$x^2 - 6$"], correct: 0 },
+          { id: 11, level: "Thông hiểu", question: "Thực hiện phép chia $(6x^4y^3 - 9x^3y^2) : (3x^2y)$ ta được kết quả là:", options: ["$2x^2y^2 - 3xy$", "$2x^2y - 3x$", "$2xy^2 - 3y$", "$2x^6y^4 - 3x^5y^3$"], correct: 0 },
+          { id: 12, level: "Thông hiểu", question: "Giá trị của đa thức $P = x^2 - 2xy + y^2$ tại $x = 102$ và $y = 2$ là:", options: ["$10000$", "$100$", "$1000$", "$10404$"], correct: 0 }
+        ],
+        part2: [
+          {
+            id: 1,
+            stem: "Cho hai đa thức: $A = 3x^2y - 2xy^2 + 5$ và $B = -x^2y + 2xy^2 - 3$.",
+            statements: [
+              { key: "a", level: "Thông hiểu", text: "Bậc của đa thức $A$ bằng 3.", correct: true },
+              { key: "b", level: "Thông hiểu", text: "Đa thức tổng $A + B = 2x^2y + 2$.", correct: true },
+              { key: "c", level: "Vận dụng thấp", text: "Tại $x = -1, y = 2$, giá trị của $A + B$ bằng $-2$.", correct: false },
+              { key: "d", level: "Vận dụng thấp", text: "Đa thức hiệu $A - B = 4x^2y - 4xy^2 + 8$.", correct: true }
+            ]
+          },
+          {
+            id: 2,
+            stem: "Cho biểu thức $P = (2x - 1)(x + 2) - 2x(x + 1)$.",
+            statements: [
+              { key: "a", level: "Thông hiểu", text: "Khai triển $(2x - 1)(x + 2) = 2x^2 + 3x - 2$.", correct: true },
+              { key: "b", level: "Thông hiểu", text: "Sau khi thu gọn, biểu thức $P = x - 2$.", correct: true },
+              { key: "c", level: "Vận dụng thấp", text: "Giá trị của $P$ tại $x = 5$ là $3$.", correct: true },
+              { key: "d", level: "Vận dụng thấp", text: "Giá trị của $P$ luôn không phụ thuộc vào giá trị của biến $x$.", correct: false }
+            ]
+          }
+        ],
+        part3: [
+          { id: 1, level: "Thông hiểu", question: "Tìm bậc của đa thức $Q = 5x^4y^2 - 3x^3y^4 + 2xy - 7$.", answer: "7" },
+          { id: 2, level: "Vận dụng thấp", question: "Tính giá trị của đa thức $A = 2x^2y - 3xy^2$ tại $x = 2$ và $y = -1$.", answer: "-14" },
+          { id: 3, level: "Vận dụng thấp", question: "Tìm hệ số của $x^2$ trong tích $(2x - 3)(x^2 + 4x - 5)$.", answer: "5" },
+          { id: 4, level: "Vận dụng cao", question: "Cho đa thức $P = x^3 - 3x^2 + 3x - 1$. Tính giá trị của $P$ khi $x = 11$.", answer: "1000" }
+        ],
+        part4: [
+          {
+            id: 1,
+            level: "Thông hiểu",
+            question: "Rút gọn biểu thức sau: $A = 2x(x - y) + y(2x - y) + y^2$.",
+            rubric: "Nhân phá ngoặc: A = 2x^2 - 2xy + 2xy - y^2 + y^2 (0.5đ). Thu gọn các hạng tử đồng dạng được A = 2x^2 (0.5đ)."
+          },
+          {
+            id: 2,
+            level: "Vận dụng thấp",
+            question: "Cho hai đa thức: $M = 3x^2 - 2xy + y^2$ và $N = x^2 + 2xy - y^2$. Tìm đa thức $P = M - 2N$ và tính giá trị của $P$ tại $x = 1, y = -2$.",
+            rubric: "Tính P = (3x^2 - 2xy + y^2) - 2(x^2 + 2xy - y^2) = x^2 - 6xy + 3y^2 (0.5đ). Thay x=1, y=-2: P = 1^2 - 6(1)(-2) + 3(-2)^2 = 1 + 12 + 12 = 25 (0.5đ)."
+          },
+          {
+            id: 3,
+            level: "Vận dụng cao",
+            question: "Chứng minh rằng giá trị của biểu thức sau không phụ thuộc vào giá trị của biến $x$: $B = (x - 1)(x^2 + x + 1) - (x + 1)(x^2 - x + 1) + 5$.",
+            rubric: "Khai triển (x - 1)(x^2 + x + 1) = x^3 - 1 (0.25đ). Khai triển (x + 1)(x^2 - x + 1) = x^3 + 1 (0.25đ). Biến đổi B = (x^3 - 1) - (x^3 + 1) + 5 (0.25đ). Rút gọn B = 3 là hằng số, vậy B không phụ thuộc vào x (0.25đ)."
+          }
+        ]
+      },
+      "9_chapter": {
+        title: "Toán 9 (KNTT) - Bài kiểm tra cuối Chương I: Phương trình và hệ hai phương trình bậc nhất hai ẩn - Bài kiểm tra số 1",
+        part1: [
+          { id: 1, level: "Nhận biết", question: "Phương trình nào sau đây là phương trình bậc nhất hai ẩn $x, y$?", options: ["$3x - 2y = 7$", "$x^2 + 2y = 5$", "$0x + 0y = 4$", "$\frac{2}{x} + y = 1$"], correct: 0 },
+          { id: 2, level: "Nhận biết", question: "Hệ phương trình nào sau đây là hệ hai phương trình bậc nhất hai ẩn?", options: ["$\begin{cases} x - 3y = 2 \\ 2x + y = 5 \end{cases}$", "$\begin{cases} xy = 1 \\ x + y = 2 \end{cases}$", "$\begin{cases} x^2 + y = 3 \\ 2x - y = 1 \end{cases}$", "$\begin{cases} 0x + 0y = 2 \\ x - y = 0 \end{cases}$"], correct: 0 },
+          { id: 3, level: "Nhận biết", question: "Cặp số $(1; 2)$ là nghiệm của phương trình nào sau đây?", options: ["$2x + y = 4$", "$x - y = 1$", "$3x + y = 6$", "$x + 2y = 3$"], correct: 0 },
+          { id: 4, level: "Nhận biết", question: "Đường thẳng biểu diễn tập nghiệm của phương trình $2x - y = 4$ cắt trục hoành $Ox$ tại điểm có tọa độ:", options: ["$(2; 0)$", "$(0; -4)$", "$(0; 2)$", "$(-4; 0)$"], correct: 0 },
+          { id: 5, level: "Nhận biết", question: "Nghiệm tổng quát của phương trình $0x + 3y = 9$ là:", options: ["$(x \in \mathbb{R}; y = 3)$", "$(x = 3; y \in \mathbb{R})$", "$(x \in \mathbb{R}; y = 9)$", "$(x = 0; y = 3)$"], correct: 0 },
+          { id: 6, level: "Nhận biết", question: "Cặp số nào sau đây là nghiệm của hệ phương trình $\begin{cases} x + y = 3 \\ x - y = 1 \end{cases}$?", options: ["$(2; 1)$", "$(1; 2)$", "$(3; 0)$", "$(0; 1)$"], correct: 0 },
+          { id: 7, level: "Thông hiểu", question: "Hệ phương trình $\begin{cases} 2x + y = 5 \\ 4x + 2y = 10 \end{cases}$ có bao nhiêu nghiệm?", options: ["Vô số nghiệm", "Vô nghiệm", "Có duy nhất 1 nghiệm", "Có đúng 2 nghiệm"], correct: 0 },
+          { id: 8, level: "Thông hiểu", question: "Hệ phương trình $\begin{cases} x - 2y = 3 \\ 2x - 4y = 5 \end{cases}$ có bao nhiêu nghiệm?", options: ["Vô nghiệm", "Vô số nghiệm", "Có 1 nghiệm duy nhất", "Có 2 nghiệm"], correct: 0 },
+          { id: 9, level: "Thông hiểu", question: "Tìm giá trị của $m$ để đường thẳng $mx - y = 3$ đi qua điểm $A(2; 1)$.", options: ["$m = 2$", "$m = -2$", "$m = 1$", "$m = -1$"], correct: 0 },
+          { id: 10, level: "Thông hiểu", question: "Nghiệm của hệ phương trình $\begin{cases} 3x - 2y = 4 \\ 2x + y = 5 \end{cases}$ là:", options: ["$(2; 1)$", "$(1; 3)$", "$(0; -2)$", "$(3; -1)$"], correct: 0 },
+          { id: 11, level: "Thông hiểu", question: "Hai đường thẳng biểu diễn tập nghiệm của hệ phương trình $\begin{cases} x + y = 2 \\ x - y = 0 \end{cases}$ cắt nhau tại điểm:", options: ["$(1; 1)$", "$(2; 0)$", "$(0; 2)$", "$(-1; -1)$"], correct: 0 },
+          { id: 12, level: "Thông hiểu", question: "Biết hệ phương trình $\begin{cases} ax + y = 3 \\ x - by = 2 \end{cases}$ có nghiệm là $(1; 1)$. Tính $a + b$.", options: ["$1$", "$2$", "$3$", "$-1$"], correct: 0 }
+        ],
+        part2: [
+          {
+            id: 1,
+            stem: "Cho hệ hai phương trình bậc nhất hai ẩn: $\begin{cases} 2x - y = 1 \\ x + 2y = 8 \end{cases}$.",
+            statements: [
+              { key: "a", level: "Thông hiểu", text: "Từ phương trình thứ nhất suy ra $y = 2x - 1$.", correct: true },
+              { key: "b", level: "Thông hiểu", text: "Thế $y = 2x - 1$ vào phương trình thứ hai ta được phương trình bậc nhất một ẩn: $5x - 2 = 8$.", correct: true },
+              { key: "c", level: "Vận dụng thấp", text: "Nghiệm duy nhất của hệ phương trình là $(x; y) = (2; 3)$.", correct: true },
+              { key: "d", level: "Vận dụng thấp", text: "Tổng giá trị $x + y$ của nghiệm hệ bằng 6.", correct: false }
+            ]
+          },
+          {
+            id: 2,
+            stem: "Một mảnh vườn hình chữ nhật có chu vi bằng 40 m. Nếu tăng chiều dài thêm 3 m và giảm chiều rộng 2 m thì diện tích giảm $14 \text{ m}^2$. Gọi chiều dài là $x$ (m) và chiều rộng là $y$ (m).",
+            statements: [
+              { key: "a", level: "Thông hiểu", text: "Điều kiện của các ẩn là $x > y > 2$ và $x + y = 20$.", correct: true },
+              { key: "b", level: "Thông hiểu", text: "Phương trình thứ nhất theo chu vi là $x + y = 20$.", correct: true },
+              { key: "c", level: "Vận dụng thấp", text: "Phương trình thứ hai theo diện tích là $(x + 3)(y - 2) = xy - 14$, rút gọn thành $-2x + 3y = -8$.", correct: true },
+              { key: "d", level: "Vận dụng thấp", text: "Chiều dài mảnh vườn ban đầu là 12 m và chiều rộng là 8 m.", correct: false }
+            ]
+          }
+        ],
+        part3: [
+          { id: 1, level: "Thông hiểu", question: "Tìm nghiệm $y$ của hệ phương trình $\begin{cases} 2x + 3y = 13 \\ x - 3y = -4 \end{cases}$.", answer: "3" },
+          { id: 2, level: "Vận dụng thấp", question: "Cho hệ phương trình $\begin{cases} 3x - y = 5 \\ 2x + 3y = 7 \end{cases}$ có nghiệm $(x_0; y_0)$. Tính $x_0 + y_0$.", answer: "3" },
+          { id: 3, level: "Vận dụng thấp", question: "Tìm giá trị của tham số $m$ để hệ phương trình $\begin{cases} mx + y = 3 \\ 4x + 2y = 6 \end{cases}$ có vô số nghiệm.", answer: "2" },
+          { id: 4, level: "Vận dụng cao", question: "Một canô xuôi dòng một khúc sông dài 90 km rồi ngược dòng về hết tổng cộng 4 giờ 30 phút. Biết vận tốc dòng nước là 3 km/h. Tính vận tốc thực của canô (km/h).", answer: "21" }
+        ],
+        part4: [
+          {
+            id: 1,
+            level: "Thông hiểu",
+            question: "Giải hệ phương trình sau bằng phương pháp cộng đại số: $\begin{cases} 3x + 2y = 8 \\ 2x - 3y = 1 \end{cases}$.",
+            rubric: "Nhân pt(1) với 3 và pt(2) với 2: 9x + 6y = 24 và 4x - 6y = 2 (0.25đ). Cộng hai phương trình vế theo vế: 13x = 26 => x = 2 (0.5đ). Thay x = 2 vào pt(1): 3(2) + 2y = 8 => y = 1 (0.25đ). Kết luận hệ có nghiệm duy nhất (2; 1)."
+          },
+          {
+            id: 2,
+            level: "Vận dụng thấp",
+            question: "Giải hệ phương trình sau bằng phương pháp đặt ẩn phụ: $\begin{cases} \frac{2}{x - 1} + \frac{1}{y + 2} = 5 \\ \frac{3}{x - 1} - \frac{2}{y + 2} = 4 \end{cases}$.",
+            rubric: "ĐKXĐ: x != 1, y != -2. Đặt u = 1/(x - 1), v = 1/(y + 2) (0.25đ). Hệ trở thành: 2u + v = 5 và 3u - 2v = 4. Giải ra u = 2, v = 1 (0.25đ). Với u = 2 => 1/(x - 1) = 2 => x = 3/2 (TM). Với v = 1 => 1/(y + 2) = 1 => y = -1 (TM) (0.25đ). Kết luận nghiệm (x; y) = (3/2; -1) (0.25đ)."
+          },
+          {
+            id: 3,
+            level: "Vận dụng cao",
+            question: "Hai tổ công nhân cùng làm chung một công việc thì hoàn thành trong 12 giờ. Nếu tổ I làm trong 4 giờ rồi tổ II làm tiếp một mình trong 10 giờ thì cả hai tổ hoàn thành được 70% công việc. Hỏi nếu mỗi tổ làm một mình thì sau bao lâu sẽ hoàn thành xong toàn bộ công việc?",
+            rubric: "Gọi thời gian tổ I, tổ II làm một mình xong là x, y (giờ) (x, y > 12). 1 giờ tổ I làm 1/x, tổ II làm 1/y công việc (0.25đ). Pt 1: 1/x + 1/y = 1/12 (0.25đ). Pt 2: 4/x + 10/y = 70% = 7/10 (0.25đ). Giải hệ u = 1/x, v = 1/y tìm được u = 1/20, v = 1/30 => x = 20 (giờ), y = 30 (giờ) (thỏa mãn). Kết luận: Tổ I làm trong 20 giờ, tổ II làm trong 30 giờ (0.25đ)."
+          }
+        ]
+      },
       "9": {
         title: "Toán 9 (KNTT) - Bài 1: Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn - Bài kiểm tra số 1",
         part1: [
@@ -611,9 +741,13 @@
         setSharedEssayImage(null);
 
         const cleanKey = apiKey.trim();
+        const currentChapter = curriculum[selectedGrade]?.chapters.find(c => c.id === selectedChapter);
+        const isChapterExam = (selectedLesson || "").toLowerCase().includes("cuối chương");
+
         if (!cleanKey) {
           // Chưa nhập Key -> Dùng ngay đề chuẩn
-          const base = DEFAULT_EXAMS[selectedGrade] || DEFAULT_EXAMS["9"];
+          const baseKey = isChapterExam ? `${selectedGrade}_chapter` : selectedGrade;
+          const base = DEFAULT_EXAMS[baseKey] || DEFAULT_EXAMS[selectedGrade] || DEFAULT_EXAMS["9"];
           setExamData({
             ...base,
             title: `Toán ${selectedGrade} (KNTT) - ${selectedLesson} - Bài kiểm tra số ${selectedTestNum}`
@@ -626,7 +760,13 @@
 
         const prompt = `
 Bạn là chuyên gia khảo thí môn Toán THCS bộ sách "Kết nối tri thức với cuộc sống".
-Hãy tạo bộ đề kiểm tra định kỳ cho: Khối ${selectedGrade}, Bài học: "${selectedLesson}", Đề: "Bài kiểm tra số ${selectedTestNum}".
+Hãy tạo bộ đề kiểm tra định kỳ cho: Khối ${selectedGrade}, Bài học/Chuyên đề: "${selectedLesson}", Đề: "Bài kiểm tra số ${selectedTestNum}".
+${isChapterExam ? `
+LƯU Ý ĐẶC BIỆT (ĐỀ KIỂM TRA TỔNG HỢP TOÀN BỘ CHƯƠNG):
+- Đây là bài kiểm tra TỔNG HỢP KIẾN THỨC TOÀN BỘ CHƯƠNG: "${currentChapter?.title || selectedLesson}".
+- Đề thi PHẢI tổng hợp toàn diện, bao quát và phân bổ đều kiến thức trọng tâm của TẤT CẢ các bài học trong chương: ${(currentChapter?.lessons || []).slice(0, -1).join(", ")}.
+- Ma trận phân bổ cân đối giữa các phần: Nhận biết (6 câu trắc nghiệm), Thông hiểu (6 câu trắc nghiệm, 2 ý Đúng/Sai, 1 câu ngắn, 1 câu tự luận), Vận dụng thấp (2 ý Đúng/Sai, 2 câu ngắn, 1 câu tự luận), Vận dụng cao (1 câu ngắn, 1 câu tự luận).
+` : ""}
 
 QUY ĐỊNH CÔNG THỨC TOÁN & JSON:
 - Mọi công thức toán học, biểu thức đại số, phân thức, căn thức, hệ phương trình PHẢI được bọc chuẩn LaTeX giữa hai dấu $ (ví dụ: $2x + 3y = 5$, $\\sqrt{x^2 - 1}$, $\\begin{cases} x+y=1 \\\\ x-y=2 \\end{cases}$).
@@ -1357,7 +1497,7 @@ TRẢ VỀ ĐÚNG ĐỊNH DẠNG JSON SAU (không kèm markdown ngoài JSON):
                           .find((c) => c.id === selectedChapter)
                           ?.lessons.map((les) => (
                             <option key={les} value={les}>
-                              {les}
+                              {les.toLowerCase().includes("cuối chương") ? `⭐ [Đề tổng hợp] ${les}` : les}
                             </option>
                           ))}
                       </select>
@@ -1367,7 +1507,7 @@ TRẢ VỀ ĐÚNG ĐỊNH DẠNG JSON SAU (không kèm markdown ngoài JSON):
                   <div className="space-y-4">
                     <div>
                       <label className="block text-xs font-bold uppercase text-slate-600 mb-2">
-                        4. Chọn Bài kiểm tra (Mỗi bài học gồm đúng 3 đề)
+                        4. Chọn Bài kiểm tra (Mỗi bài học / chương gồm đúng 3 đề độc lập)
                       </label>
                       <div className="grid grid-cols-3 gap-2.5">
                         {[1, 2, 3].map((num) => (
